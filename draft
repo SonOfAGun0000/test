@@ -1,0 +1,186 @@
+          <form id="appointment-form" novalidate>
+
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Mobile Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-date">Preferred Appointment Date</label>
+              <input type="date" id="preferred-date" name="preferredDate" required>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-time">Preferred Time Slot</label>
+              <select id="preferred-time" name="preferredTime" required>
+                <option value="">Select a time slot</option>
+                <option value="morning">Morning (9:00 AM – 1:00 PM)</option>
+                <option value="evening">Evening (3:00 PM – 5:00 PM)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="session-type">Session Type</label>
+              <select id="session-type" name="sessionType" required>
+                <option value="">Select session type</option>
+                <option value="in-person">In-person</option>
+                <option value="phone">Phone (selected cases)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Brief Note (optional)</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+
+
+
+
+
+
+    <!-- ===== INTAKE FORM ===== -->
+<!-- <section id="intake-form-section" class="section section--highlight">
+  <div class="container">
+
+    <h3>Client Intake Form</h3>
+
+    <p>
+      The information provided below helps us understand your needs better.
+      All details are kept strictly confidential.
+    </p>
+
+    <form id="intake-form" novalidate> -->
+
+      <!-- BASIC DETAILS -->
+      <!-- <fieldset>
+        <legend>Basic Information</legend>
+
+        <div class="form-group">
+          <label for="client-name">Full Name</label>
+          <input type="text" id="client-name" name="clientName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="client-gender">Gender</label>
+          <select id="client-gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">Qualification</label>
+          <input type="text" id="qualification" name="qualification">
+        </div>
+
+        <div class="form-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" name="occupation">
+        </div>
+      </fieldset>
+ -->
+      <!-- CONTACT DETAILS -->
+      <!-- <fieldset>
+        <legend>Contact Details</legend>
+
+        <div class="form-group">
+          <label for="phone-primary">Primary Mobile Number</label>
+          <input type="tel" id="phone-primary" name="phonePrimary" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone-secondary">Alternate Mobile Number</label>
+          <input type="tel" id="phone-secondary" name="phoneSecondary">
+        </div>
+
+        <div class="form-group">
+          <label for="home-address">Home Address</label>
+          <textarea id="home-address" name="homeAddress" rows="3"></textarea>
+        </div>
+      </fieldset> -->
+
+      <!-- COUNSELLING DETAILS -->
+      <!-- <fieldset>
+        <legend>Counselling Information</legend>
+
+        <div class="form-group">
+          <label for="reason">Primary Concern</label>
+          <textarea id="reason" name="primaryConcern" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration of the Problem</label>
+          <input type="text" id="duration" name="duration">
+        </div>
+
+        <div class="form-group">
+          <label for="medication">Currently on Medication?</label>
+          <select id="medication" name="medication">
+            <option value="">Select</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+      </fieldset>
+ -->
+      <!-- CONSENT -->
+      <!-- <fieldset> -->
+
+
+
+
+
+/* =========================================
+   WHATSAPP APPOINTMENT FORM HANDLER - *****For FUTURE USE*****
+   ========================================= */
+
+// document.addEventListener("DOMContentLoaded", function () {
+
+//   const appointmentForm = document.getElementById("appointment-form");
+
+//   if (!appointmentForm) return;
+
+//   appointmentForm.addEventListener("submit", function (event) {
+//     event.preventDefault();
+
+//     const name = document.getElementById("full-name").value.trim();
+//     const phone = document.getElementById("phone").value.trim();
+//     const date = document.getElementById("preferred-date").value;
+//     const time = document.getElementById("preferred-time").value;
+//     const type = document.getElementById("session-type").value;
+//     const note = document.getElementById("message").value.trim();
+
+//     let message =
+//       "New Appointment Request%0A" +
+//       "------------------------%0A" +
+//       "Name: " + name + "%0A" +
+//       "Phone: " + phone + "%0A" +
+//       "Preferred Date: " + date + "%0A" +
+//       "Time Slot: " + time + "%0A" +
+//       "Session Type: " + type;
+
+//     if (note !== "") {
+//       message += "%0ANote: " + note;
+//     }
+
+//     const whatsappNumber = "919894711228";
+//     const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+//     window.open(whatsappURL, "_blank");
+//   });
+
+// });
+/* =========================================*/

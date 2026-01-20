@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://peaceofmindcbe.in/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/about.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/services.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/certificates.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/media.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/intake.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/appointment.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/contact.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/privacy.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://peaceofmindcbe.in/terms.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+</urlset>
