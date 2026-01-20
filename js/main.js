@@ -55,6 +55,7 @@ window.addEventListener('scroll',()=>{
 })
 /*=============================================*/
 
+
 /* =========================================
     REUSABLE COMPONENT LOADER
    ========================================= */
@@ -93,6 +94,7 @@ function highlightActiveLink() {
 
 // Initialize on load
 document.addEventListener("DOMContentLoaded", () => {
-    loadComponent("site-header", "includes/header-partial.html");
-    loadComponent("site-footer", "includes/footer-partial.html");
+    loadComponent("site-header", "./includes/header-partial.html");
+    loadComponent("site-footer", "./includes/footer-partial.html");
+
 });
