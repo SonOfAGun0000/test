@@ -614,7 +614,21 @@ form .btn {
   align-items: center;
   gap: 0.6rem;
 }
+.healing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Increased gap for breathing room */
+    margin-top: 2rem;
+}
 
+.healing-card {
+    padding: 1.5rem; /* More padding inside the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80px;
+}
 /* =====================================================
    ABOUT PAGE STYLING
 ===================================================== */
