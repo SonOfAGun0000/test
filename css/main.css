@@ -196,7 +196,8 @@ li {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #ffffff;
+  background: #ffffff;  
+  min-height: 80px; /* Adjust based on your header's actual height */
 }
 
 .header__inner {
@@ -1333,3 +1334,4 @@ form .btn {
     font-size: 17px;
   }
 }
+
