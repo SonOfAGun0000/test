@@ -711,6 +711,7 @@ form .btn {
 
 .about-clinic {
   flex-direction: row;
+  align-items: center;
 }
 
 .about-philosophy {
