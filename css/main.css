@@ -725,6 +725,31 @@ form .btn {
   color: var(--brand-blue);
   margin-bottom: 1rem;
 }
+/* Center alignment fix for Flex Content */
+.about-clinic.container,
+.about-support.container,
+.about-philosophy.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally */
+    text-align: center;   /* Centers text inside blocks */
+}
+
+.flex-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* This is the key fix for centering */
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Ensure text blocks within flex don't stay left-aligned if you want them centered */
+.about-clinic__content {
+    text-align: left; /* Keep text left-aligned for readability while the block is centered */
+    max-width: 600px;
+}
 
 /* Support Grid */
 .support-grid {
