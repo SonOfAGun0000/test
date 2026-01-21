@@ -737,7 +737,7 @@ form .btn {
 .flex-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* This is the key fix for centering */
+    justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
     width: 100%;
@@ -747,7 +747,13 @@ form .btn {
 /* Ensure text blocks within flex don't stay left-aligned if you want them centered */
 .about-clinic__content {
     text-align: left; /* Keep text left-aligned for readability while the block is centered */
+    flex: 1 1 450px; /* Gives the text block a base width */
     max-width: 600px;
+}
+.about-clinic__image {
+    flex: 0 1 350px; /* Keeps the illustration from growing too large */
+    display: flex;
+    justify-content: center;
 }
 
 /* Support Grid */
@@ -1309,6 +1315,12 @@ form .btn {
     }
     .quote-divider__text { font-size: 1.3rem; }
     .quote-divider__tamil { font-size: 1.2rem; }
+    .flex-content {
+        text-align: center;
+    }
+    .about-clinic__content {
+        text-align: center;
+    }
 }
   
 /* Mobile */
