@@ -1254,233 +1254,123 @@ form .btn {
 .reveal-delay-3 { transition-delay: 0.3s; }
 
 
-/* ===============================
-   MOBILE REFINEMENTS
-   =============================== */
+/* =============================================================
+   BULLETPROOF RESPONSIVE SYSTEM (COIMBATORE CLINIC STANDARD)
+   ============================================================= */
 
-/* Tablet */
-/* Compact header layout for tablet & mobile */
+/* --- 1. TABLET & SMALL LAPTOPS (900px and down) --- */
 @media (max-width: 900px) {
-
-/* 1. Header Structure: Keep Brand and CTA on top, Nav below */
   .header__inner {
     display: flex;
-    flex-direction: column; /* Stack vertically */
-    gap: 0.8rem;
+    flex-direction: column;
     padding: 0.8rem 1rem;
+    gap: 0.5rem; /* Tighter gap to save space */
   }
-/* 2. Top Row: Brand and CTA side-by-side */
-  .header__inner > *:not(#primary-navigation) {
+
+  /* Split Brand and CTA */
+  .header__inner > div:not(#primary-navigation) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-/* Force the Brand and CTA to stay on one row */
-  .brand { flex: 1; text-align: left; }
-  .header__cta { 
-    flex: 0; 
-    min-width: auto; 
-    margin-bottom: 0; /* Remove bottom margin if present */
-  }
-  .header__cta a {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    white-space: nowrap;
-  }
-  /* 3. The Navigation: Horizontal Scroll */
+
+  /* Stable Horizontal Nav */
   #primary-navigation {
-    width: 100vw; /* Take full viewport width */
-    margin-left: -1rem; /* Offset the container padding */
-    border-top: 1px solid #eee;
-    padding: 0.8rem 0;
-    background: #fdfdfd; /* Subtle background to show it's a menu */
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+    padding: 8px 0;
   }
+
   .nav__list {
     display: flex;
-    flex-wrap: nowrap; /* NO WRAPPING */
-    overflow-x: auto;  /* ENABLE SCROLL */
-    padding: 0 1rem;   /* Side padding for the scroll area */
-    gap: 1.5rem;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch; /* Smooth scroll on iPhones */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.2rem;
+    justify-content: flex-start; /* Fixes disappearing Home link */
+    -webkit-overflow-scrolling: touch;
+    padding: 0 5px;
   }
-  /* Hide scrollbar but keep functionality */
-  .nav__list::-webkit-scrollbar {
-    display: none;
+
+  .nav__list::-webkit-scrollbar { display: none; }
+  .nav__link { white-space: nowrap; font-size: 0.9rem; }
+}
+
+/* --- 2. LARGE PHONES & TABLETS (768px and down) --- */
+@media (max-width: 768px) {
+  .section { padding: 2.5rem 0; }
+  
+  /* Reset All Flex Layouts to Stack */
+  .flex-content, .about-wrap {
+    flex-direction: column !important;
+    text-align: center;
   }
-  .nav__link {
-    white-space: nowrap;
-    font-size: 0.95rem;
-    padding-bottom: 5px;
+
+  .about-clinic__content, .text-block {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .service-visual, .about-clinic__image img {
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .mobile-call-bar { display: block; }
+
+  /* Grid Resets */
+  .healing-grid, .process-grid, .cert-grid, .support-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }
 
-
-@media (max-width: 768px) {
-
-  /* Header stacks neatly */
-  .header__inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 0.1rem;
-    padding: 10px;
-  }
-
-  .brand {
-    align-items: left;
-    margin-bottom: 1rem;
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .brand p {
-    max-width: none;
-    text-align: left;
-  }
-
-  #site-header {
-    padding: 0.6rem 0;
-  }
-  #site-header .container {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-  }
-
-  .header__topbar {
-    font-size: 0.75rem;
-    padding: 0.3rem 0;
-  }
-
-  .header__main {
-    padding: 0.4rem 0;
-  }
-
-  .header__nav ul {
-    gap: 0.4rem;
-    font-size: 0.9rem;
-  }
-
+/* --- 3. STANDARD MOBILE (425px and down) --- */
+@media (max-width: 425px) {
+  .brand__name { font-size: 1.3rem; }
+  .brand__tagline { font-size: 0.8rem; }
+  
   .header__cta a {
     padding: 0.5rem 0.8rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
   }
+
+  .sacred-title { font-size: 1.8rem; }
+  .sacred-subtitle { font-size: 0.95rem; }
+
+  /* Ensure long Tamil text doesn't overflow */
+  .quote-divider__tamil { font-size: 1.1rem; padding: 0 10px; }
   
-  .about-doctor {
+  /* Footer cleanup */
+  .footer-bottom-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    margin-bottom: 80px; /* Space for Mobile Call Bar */
   }
-
-  .about-hero h1 {
-    font-size: 2rem;
-  }
-  .about-doctor,
-  .about-clinic,
-  .about-philosophy {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-wrap {
-    flex-direction: column;
-    text-align: center;
-  }
-  .mobile-call-bar{
-    display:block;
-  }
-    .quote-divider {
-        background-attachment: scroll; /* Fixed bg performs poorly on mobile */
-        padding: 3.5rem 1rem;
-    }
-    .quote-divider__text { font-size: 1.3rem; }
-    .quote-divider__tamil { font-size: 1.2rem; }
-    .flex-content {
-        text-align: center;
-        flex-direction: column !important; /* Stack image and text */
-    }
-    .service-visual {
-        max-width: 100%;
-        margin: 1rem 0;
-    }
-
-    .about-clinic__content {
-        text-align: center;
-    }
 }
+
+/* --- 4. SMALL MOBILE (320px and down) --- */
+@media (max-width: 325px) {
+  .container { padding: 0.8rem; }
   
-/* Mobile */
-@media (max-width: 600px) {
-  .sacred-hero__content {
-    grid-template-columns: 1fr;
-    padding: 2rem 1rem;
-  }
+  /* Minimal Brand to save height */
+  .brand__tagline { display: none; } /* Hide tagline on tiny screens */
+  .brand__name { font-size: 1.1rem; }
 
-  .sacred-title {
-    font-size: 2.1rem;
-    line-height: 1.2;
-  }
+  .header__cta a { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
 
-  .sacred-subtitle {
-    font-size: 1rem;
-    text-align: center;
-    max-width: 22rem;
-  }
+  #primary-navigation { padding: 5px 0; }
+  .nav__list { gap: 0.8rem; }
+  .nav__link { font-size: 0.85rem; }
 
-  .sacred-quote {
-    font-size: 0.9rem;
-  }
-
-  .sacred-call {
-    width: 100%;
-    max-width: 280px;
-  }
-    .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer stacks */
-  .footer__content {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__content > div {
-    max-width: 100%;
-    text-align: center;
-  }
-    .footer-bottom-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-bottom: 100px;
-  }
-
-  .footer-bottom-grid p {
-    text-align: center;
-  }
+  /* Shrink hero spacing */
+  .section--sacred { padding: 2rem 0; }
+  .sacred-chakra { width: 50px; }
 }
 
-/* Mobile */
-@media (max-width: 450px) {
-  .header__nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-    text-align: center;
-  }
-
-  .header__cta {
-    width: 100%;
-    text-align: center;
-  }
-
-  .header__cta a {
-    width: 100%;
-    display: inline-block;
-  }
-
-}
-
+/* --- FINAL PROTECTION LAYER --- */
+.site-watermark { pointer-events: none; }
+img { max-width: 100%; height: auto; } /* Global image safety */
 /* ===============================
    BRAND TEXT OVERRIDES
    =============================== */
