@@ -948,6 +948,35 @@ form .btn {
   contain-intrinsic-size: 300px 300px;
 }
 
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.process-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(18, 130, 221, 0.08);
+  position: relative;
+  border-top: 4px solid var(--brand-blue);
+}
+
+.process-number {
+  background: var(--brand-blue);
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 /* Lightbox Viewer */
 
 #lightbox{
@@ -1242,21 +1271,38 @@ form .btn {
     gap: 0.35rem;
     padding: 0.35rem 0.8rem;
   }
-
-  .brand { grid-area: brand; }
-  .header__cta { grid-area: cta; }
-  #primary-navigation { grid-area: nav; }
-
+  .brand { 
+    grid-area: brand; 
+  }
+  .header__cta { 
+    grid-area: cta; 
+  }
   .nav__list {
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  #primary-navigation {
-    grid-area: nav;
-    width: 100%;
-  }
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping into multiple rows */
+      overflow-x: auto; /* Allow horizontal swiping */
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+      justify-content: flex-start; /* Align to left so user knows to scroll */
+      gap: 1.5rem;
+    }
 
+    /* Hide scrollbar for a cleaner look while keeping functionality */
+    .nav__list::-webkit-scrollbar {
+      display: none;
+    }
+    
+    #primary-navigation {
+      width: 100%;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .nav__link {
+      white-space: nowrap; /* Keep text on one line */
+      font-size: 0.95rem;
+    }
+    
   .header__cta {
     grid-area: cta;
     justify-self: end;
@@ -1343,7 +1389,13 @@ form .btn {
     .quote-divider__tamil { font-size: 1.2rem; }
     .flex-content {
         text-align: center;
+        flex-direction: column !important; /* Stack image and text */
     }
+    .service-visual {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
     .about-clinic__content {
         text-align: center;
     }
