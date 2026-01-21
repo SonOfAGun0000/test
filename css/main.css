@@ -1255,19 +1255,18 @@ form .btn {
 
 
 /* =============================================================
-   BULLETPROOF RESPONSIVE SYSTEM (COIMBATORE CLINIC STANDARD)
+   RESPONSIVE SYSTEM
    ============================================================= */
-
-/* --- 1. TABLET & SMALL LAPTOPS (900px and down) --- */
+/* --- 1. TABLET & LAPTOP (900px and down) --- */
 @media (max-width: 900px) {
   .header__inner {
     display: flex;
     flex-direction: column;
     padding: 0.8rem 1rem;
-    gap: 0.5rem; /* Tighter gap to save space */
+    gap: 0.6rem;
   }
 
-  /* Split Brand and CTA */
+  /* Brand Left, CTA Right - No Tagline */
   .header__inner > div:not(#primary-navigation) {
     display: flex;
     justify-content: space-between;
@@ -1275,100 +1274,92 @@ form .btn {
     width: 100%;
   }
 
-  /* Stable Horizontal Nav */
+  .brand__tagline { display: none; } /* Saves vertical space for content */
+
   #primary-navigation {
     width: 100%;
     border-top: 1px solid #f0f0f0;
-    padding: 8px 0;
+    padding: 10px 0 5px 0;
   }
 
+  /* THE FIX: justify-content flex-start ensures 'Home' is never hidden */
   .nav__list {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 1.2rem;
-    justify-content: flex-start; /* Fixes disappearing Home link */
+    gap: 1.5rem;
+    justify-content: flex-start; 
     -webkit-overflow-scrolling: touch;
     padding: 0 5px;
   }
 
   .nav__list::-webkit-scrollbar { display: none; }
-  .nav__link { white-space: nowrap; font-size: 0.9rem; }
+  .nav__link { white-space: nowrap; font-size: 0.95rem; }
 }
 
-/* --- 2. LARGE PHONES & TABLETS (768px and down) --- */
+/* --- 2. THE HERO & LAYOUT FIX (768px and down) --- */
 @media (max-width: 768px) {
-  .section { padding: 2.5rem 0; }
-  
-  /* Reset All Flex Layouts to Stack */
+  .section { padding: 3rem 0; }
+
+  /* Stack Hero Content Vertically */
+  .sacred-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .sacred-banyan {
+    max-width: 280px; /* Bigger image for better impact */
+    margin: 0 auto;
+  }
+
   .flex-content, .about-wrap {
     flex-direction: column !important;
-    text-align: center;
-  }
-
-  .about-clinic__content, .text-block {
-    text-align: center;
-    flex: 1 1 100%;
-  }
-
-  .service-visual, .about-clinic__image img {
-    max-width: 100%;
-    margin: 1.5rem auto;
   }
 
   .mobile-call-bar { display: block; }
 
-  /* Grid Resets */
   .healing-grid, .process-grid, .cert-grid, .support-grid {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
   }
 }
 
-/* --- 3. STANDARD MOBILE (425px and down) --- */
+/* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
 @media (max-width: 425px) {
-  .brand__name { font-size: 1.3rem; }
-  .brand__tagline { font-size: 0.8rem; }
+  .brand__name { font-size: 1.2rem; }
   
   .header__cta a {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0.9rem;
     font-size: 0.8rem;
     border-radius: 8px;
   }
 
-  .sacred-title { font-size: 1.8rem; }
-  .sacred-subtitle { font-size: 0.95rem; }
-
-  /* Ensure long Tamil text doesn't overflow */
-  .quote-divider__tamil { font-size: 1.1rem; padding: 0 10px; }
+  /* Hero adjustments for impact */
+  .sacred-title { font-size: 2.2rem; } /* Bold and large */
+  .sacred-banyan { max-width: 240px; }
   
-  /* Footer cleanup */
+  .quote-divider__tamil { font-size: 1.2rem; }
+  
   .footer-bottom-grid {
     grid-template-columns: 1fr;
-    margin-bottom: 80px; /* Space for Mobile Call Bar */
+    margin-bottom: 80px;
   }
 }
 
-/* --- 4. SMALL MOBILE (320px and down) --- */
+/* --- 4. MOBILE SMALL (320px) --- */
 @media (max-width: 325px) {
-  .container { padding: 0.8rem; }
-  
-  /* Minimal Brand to save height */
-  .brand__tagline { display: none; } /* Hide tagline on tiny screens */
   .brand__name { font-size: 1.1rem; }
-
-  .header__cta a { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
-
-  #primary-navigation { padding: 5px 0; }
-  .nav__list { gap: 0.8rem; }
-  .nav__link { font-size: 0.85rem; }
-
-  /* Shrink hero spacing */
-  .section--sacred { padding: 2rem 0; }
-  .sacred-chakra { width: 50px; }
+  .sacred-title { font-size: 1.8rem; }
+  .sacred-banyan { max-width: 200px; }
+  
+  .nav__list { gap: 1rem; }
+  .nav__link { font-size: 0.9rem; }
 }
 
-/* --- FINAL PROTECTION LAYER --- */
+/* --- GLOBAL SAFETY --- */
+.site-watermark { pointer-events: none; }
+img { max-width: 100%; height: auto; }/* --- FINAL PROTECTION LAYER --- */
 .site-watermark { pointer-events: none; }
 img { max-width: 100%; height: auto; } /* Global image safety */
 /* ===============================
