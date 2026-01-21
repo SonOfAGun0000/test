@@ -2,32 +2,76 @@
 /* =========================================
     LIGHT BOX IMAGE OPENER
     ========================================= */
-document.addEventListener("DOMContentLoaded",()=>{
+// document.addEventListener("DOMContentLoaded",()=>{
 
+//   const images = [...document.querySelectorAll(".cert-grid img, .gallery-grid img")];
+//   const lightbox = document.getElementById("lightbox");
+//   const lightboxImg = document.getElementById("lightbox-img");
+
+//   // Safety Check: Only run if these elements exist on the current page
+//   if (!lightbox || !images.length) return;
+  
+//   const closeBtn = document.getElementById("lightbox-close");
+//   const prevBtn = document.querySelector(".lightbox-nav.prev");
+//   const nextBtn = document.querySelector(".lightbox-nav.next");
+
+//   let currentIndex = 0;
+
+//   function showImage(i){
+//     currentIndex = (i + images.length) % images.length;
+//     lightboxImg.src = images[currentIndex].src;
+//     lightbox.style.display = "flex";
+//   }
+
+//   images.forEach((img,i)=>{
+//     img.onclick = ()=> showImage(i);
+//   });
+
+// // Use optional chaining or if-checks for navigation buttons
+//   if (prevBtn) prevBtn.onclick = () => showImage(currentIndex - 1);
+//   if (nextBtn) nextBtn.onclick = () => showImage(currentIndex + 1);
+//   if (closeBtn) closeBtn.onclick = () => lightbox.style.display = "none";
+
+//   lightbox.onclick = e => {
+//     if (e.target === lightbox) lightbox.style.display = "none";
+//   };
+
+//   document.addEventListener("keydown", e=>{
+//     if(e.key === "Escape") lightbox.style.display="none";
+//     if(e.key === "ArrowRight") showImage(currentIndex + 1);
+//     if(e.key === "ArrowLeft") showImage(currentIndex - 1);
+//   });
+
+// });
+
+/* =========================================
+    SAFE LIGHT BOX OPENER
+   ========================================= */
+document.addEventListener("DOMContentLoaded", () => {
   const images = [...document.querySelectorAll(".cert-grid img, .gallery-grid img")];
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-
+  
   // Safety Check: Only run if these elements exist on the current page
   if (!lightbox || !images.length) return;
-  
+
   const closeBtn = document.getElementById("lightbox-close");
   const prevBtn = document.querySelector(".lightbox-nav.prev");
   const nextBtn = document.querySelector(".lightbox-nav.next");
 
   let currentIndex = 0;
 
-  function showImage(i){
+  function showImage(i) {
     currentIndex = (i + images.length) % images.length;
     lightboxImg.src = images[currentIndex].src;
     lightbox.style.display = "flex";
   }
 
-  images.forEach((img,i)=>{
-    img.onclick = ()=> showImage(i);
+  images.forEach((img, i) => {
+    img.onclick = () => showImage(i);
   });
 
-// Use optional chaining or if-checks for navigation buttons
+  // Use optional chaining or if-checks for navigation buttons
   if (prevBtn) prevBtn.onclick = () => showImage(currentIndex - 1);
   if (nextBtn) nextBtn.onclick = () => showImage(currentIndex + 1);
   if (closeBtn) closeBtn.onclick = () => lightbox.style.display = "none";
@@ -35,13 +79,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   lightbox.onclick = e => {
     if (e.target === lightbox) lightbox.style.display = "none";
   };
-
-  document.addEventListener("keydown", e=>{
-    if(e.key === "Escape") lightbox.style.display="none";
-    if(e.key === "ArrowRight") showImage(currentIndex + 1);
-    if(e.key === "ArrowLeft") showImage(currentIndex - 1);
-  });
-
 });
 
 /* =========================================*/
