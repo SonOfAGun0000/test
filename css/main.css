@@ -1101,6 +1101,51 @@ form .btn {
   box-shadow: 0 10px 28px rgba(47,111,163,.18);
 }
 
+/* =========================================
+   BREATHE SECTIONS (QUOTE DIVIDERS)
+   ========================================= */
+.quote-divider {
+    position: relative;
+    width: 100%;
+    /* Update extension to .png if necessary */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('../images/home/quote-bg.png') center/cover no-repeat fixed;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid var(--brand-blue-soft);
+    border-bottom: 1px solid var(--brand-blue-soft);
+    margin: 2rem 0;
+}
+
+.quote-divider__text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--brand-blue);
+    max-width: 800px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.quote-divider__tamil {
+    font-size: 1.4rem;
+    color: var(--brand-text-dark);
+    font-weight: 600;
+    line-height: 1.6;
+}
+.quote-divider::before,
+.quote-divider::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: var(--brand-blue);
+    margin: 1rem auto;
+    opacity: 0.5;
+}
+
 /* ===============================
    MOBILE REFINEMENTS
    =============================== */
@@ -1211,6 +1256,12 @@ form .btn {
   .mobile-call-bar{
     display:block;
   }
+    .quote-divider {
+        background-attachment: scroll; /* Fixed bg performs poorly on mobile */
+        padding: 3.5rem 1rem;
+    }
+    .quote-divider__text { font-size: 1.3rem; }
+    .quote-divider__tamil { font-size: 1.2rem; }
 }
   
 /* Mobile */
