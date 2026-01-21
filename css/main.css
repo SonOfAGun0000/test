@@ -727,7 +727,6 @@ form .btn {
 }
 /* Center alignment fix for Flex Content */
 .about-clinic.container,
-.about-support.container,
 .about-philosophy.container {
     display: flex;
     flex-direction: column;
