@@ -1145,6 +1145,28 @@ form .btn {
     margin: 1rem auto;
     opacity: 0.5;
 }
+/* Service Illustration Styling */
+.service-visual {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+    /* Soft shadow to make it pop */
+    box-shadow: 0 10px 30px rgba(18, 130, 221, 0.1); 
+}
+
+/* Side-by-side container for text and image */
+.flex-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.flex-content > * {
+    flex: 1 1 300px;
+}
 
 /* ===============================
    MOBILE REFINEMENTS
