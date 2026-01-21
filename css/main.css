@@ -961,11 +961,13 @@ form .btn {
 }
 
 #lightbox-img{
-  max-width:90vw;
-  max-height:90vh;
-  background:#fff;
-  padding:12px;
-  border-radius:18px;
+  max-width: 95vw; /* Increased from 90 */
+  max-height: 95vh;
+  object-fit: contain; /* Ensures the whole pamphlet is visible */
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
   content-visibility: auto;
   contain-intrinsic-size: 300px 300px;
 }
