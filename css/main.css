@@ -1262,10 +1262,25 @@ form .btn {
   .header__inner {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 0.8rem 1rem;
     gap: 0.6rem;
   }
+ .header__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
+  .brand {
+    text-align: left;
+    flex: 1;
+  }
+
+  .header__cta {
+    margin-top: 0 !important; /* Prevents it from jumping down */
+  }
   /* Brand Left, CTA Right - No Tagline */
   .header__inner > div:not(#primary-navigation) {
     display: flex;
@@ -1288,12 +1303,10 @@ form .btn {
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 1.5rem;
-    
     /* These three lines ensure 'Home' is never pushed off-screen */
     justify-content: flex-start !important; 
     margin: 0 !important;
     padding: 0 15px !important; 
-
     list-style: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -1434,6 +1447,7 @@ img { max-width: 100%; height: auto; } /* Global image safety */
     font-size: 17px;
   }
 }
+
 
 
 
