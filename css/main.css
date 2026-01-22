@@ -1301,7 +1301,12 @@ form .btn {
   .nav__list::-webkit-scrollbar {
     display: none;
   }
-
+.nav__link {
+    white-space: nowrap !important; /* Forces 'New Client' to stay on one line */
+    font-size: 0.95rem;
+    display: inline-block;
+    padding: 5px 0;
+  }
 /* --- 2. THE HERO & LAYOUT FIX (768px and down) --- */
 @media (max-width: 768px) {
   .section { padding: 3rem 0; }
@@ -1429,5 +1434,6 @@ img { max-width: 100%; height: auto; } /* Global image safety */
     font-size: 17px;
   }
 }
+
 
 
