@@ -1280,22 +1280,27 @@ form .btn {
     width: 100%;
     border-top: 1px solid #f0f0f0;
     padding: 10px 0 5px 0;
+    overflow: hidden; /* Keeps the scroll contained */
   }
 
-  /* THE FIX: justify-content flex-start ensures 'Home' is never hidden */
-  .nav__list {
+.nav__list {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 1.5rem;
-    justify-content: flex-start; 
+    
+    /* These three lines ensure 'Home' is never pushed off-screen */
+    justify-content: flex-start !important; 
+    margin: 0 !important;
+    padding: 0 15px !important; 
+
+    list-style: none;
     -webkit-overflow-scrolling: touch;
-    padding: 0 5px;
   }
 
-  .nav__list::-webkit-scrollbar { display: none; }
-  .nav__link { white-space: nowrap; font-size: 0.95rem; }
-}
+  .nav__list::-webkit-scrollbar {
+    display: none;
+  }
 
 /* --- 2. THE HERO & LAYOUT FIX (768px and down) --- */
 @media (max-width: 768px) {
@@ -1424,4 +1429,5 @@ img { max-width: 100%; height: auto; } /* Global image safety */
     font-size: 17px;
   }
 }
+
 
