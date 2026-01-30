@@ -1265,17 +1265,16 @@ form .btn {
    ============================================================= */
 /* --- 1. TABLET & LAPTOP (900px and down) --- */
 @media (max-width: 900px) {
-  .header__inner {
-    flex-direction: column;
-    padding: 0.8rem 1rem 0; /* No bottom padding to tighten nav */
-    gap: 0.5rem;
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
   }
-
-  /* Hide header Call Button on mobile - Bottom bar handles it */
-  .header__cta {
-    display: none !important;
+.header__top-row {
+    flex: 0 1 auto;
   }
-
   .brand {
     width: 100%;
     text-align: center;
@@ -1285,26 +1284,19 @@ form .btn {
     font-size: 0.8rem;
   }
 
-  /* PREMIUM SCROLLING NAV WITH GRADIENT MASK */
-  #primary-navigation {
-    width: 100%;
-    border-top: 1px solid #f0f0f0;
-    padding: 10px 0;
-    /* This creates the 'swipe more' gradient indicator */
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+#primary-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
   }
 
-  .nav__list {
+.nav__list {
     display: flex;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    gap: 1.8rem;
-    justify-content: flex-start !important;
-    padding: 0 15px !important;
-    margin: 0 !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    flex-wrap: nowrap;
+    overflow: visible !important;
+    gap: 1.5rem;
   }
 
   .nav__list::-webkit-scrollbar {
@@ -1315,10 +1307,79 @@ form .btn {
     white-space: nowrap !important;
     font-size: 0.95rem;
   }
+  .header__cta {
+    display: block;
+    flex: 0 1 auto;
+  }
 }
 
-/* --- 2. THE HERO & LAYOUT FIX (768px and down) --- */
+/* ---(768px and down) --- */
 @media (max-width: 768px) {
+  .header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  /* Center Brand & Tagline */
+  .header__top-row {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand__name {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .brand__tagline {
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  /* Hide Header CTA - Handled by Mobile Call Bar */
+  .header__cta {
+    display: none !important;
+  }
+
+  /* The Nav List: The ONLY Scrolling Part */
+  #primary-navigation {
+    width: 100%;
+    margin-top: 0.8rem;
+    border-top: 1px solid #eee;
+    padding: 12px 0;
+    /* Gradient Swipe Indicators */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  .nav__list {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 1.8rem;
+    padding: 0 25px !important; /* Protects 'Home' from left cutoff */
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+  }
+
+  .nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav__link {
+    white-space: nowrap !important;
+    font-size: 0.95rem;
+  }
+
+  .sacred-hero__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .section { padding: 3rem 0; }
   
   .sacred-hero__content, .flex-content, .about-wrap {
@@ -1339,6 +1400,7 @@ form .btn {
   }
 }
 
+
 /* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
 @media (max-width: 425px) {
   .brand__name { font-size: 1.3rem; }
@@ -1357,11 +1419,11 @@ form .btn {
 
 /* --- 4. MOBILE SMALL (320px) --- */
 @media (max-width: 325px) {
-  .brand__name { font-size: 1.1rem; }
+  .brand__name { font-size: 1.2rem; }
   .sacred-title { font-size: 1.8rem; }
   .sacred-banyan { max-width: 200px; }
   
-  .nav__list { gap: 1rem; }
+  .nav__list { gap: 1.2rem; }
   .nav__link { font-size: 0.9rem; }
 }
 
