@@ -321,6 +321,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-items: center;
   gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 70px;
@@ -1176,7 +1177,6 @@ form .btn {
 .quote-divider {
     position: relative;
     width: 100%;
-    /* Update extension to .png if necessary */
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
                 url('../images/home/quote-bg.png') center/cover no-repeat fixed;
     padding: 5rem 1rem;
@@ -1414,6 +1414,9 @@ form .btn {
   }
   .footer__content {
     gap: 1rem;
+  }
+  .site-credit{
+    max-width: 350px;
   }
 }
 @media (max-width: 600px) {
