@@ -1333,7 +1333,7 @@ form .btn {
   .header__inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
     text-align: center;
     padding: 1rem 0 0.5rem 0;
   }
