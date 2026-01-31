@@ -1436,10 +1436,17 @@ form .btn {
 }
 
 /* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
-@media (max-width: 425px) {
+@media (max-width: 475px) {
   .brand__name { font-size: 1.3rem; }
   .sacred-title { font-size: 1.8rem; }
   
+    .nav__list {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start !important;
+
+  }
+
   .footer-bottom-grid {
     grid-template-columns: 1fr;
     margin-bottom: 70px; /* Space for the bottom call bar */
