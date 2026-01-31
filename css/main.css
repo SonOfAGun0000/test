@@ -324,7 +324,7 @@ li {
   gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 70px;
-  max-width: 1000px;
+  max-width: 100%;
 }
 
 .footer-bottom-grid p:first-child,
