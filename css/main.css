@@ -323,6 +323,7 @@ li {
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 70px;
   max-width: 1000px;
   margin: 0 auto
 }
