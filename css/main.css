@@ -219,7 +219,7 @@ li {
 }
 .brand { flex: 0 1 auto; }
 .brand__name {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .brand__tagline {
   font-size: 0.9rem;
@@ -1347,7 +1347,7 @@ form .btn {
     text-align: center;
   }
   .brand__name {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-bottom: 0.2rem;
   }
 
@@ -1452,7 +1452,7 @@ form .btn {
 
 /* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
 @media (max-width: 425px) {
-  .brand__name { font-size: 1.3rem; }
+  .brand__name { font-size: 1.6rem; }
   .sacred-title { font-size: 1.8rem; }
   
     .nav__list {
@@ -1468,7 +1468,7 @@ form .btn {
 
 /* --- 4. MOBILE SMALL (320px) --- */
 @media (max-width: 325px) {
-  .brand__name { font-size: 1.2rem; }
+  .brand__name { font-size: 1.5rem; }
   .sacred-title { font-size: 1.8rem; }
   .sacred-banyan { max-width: 200px; }
   
