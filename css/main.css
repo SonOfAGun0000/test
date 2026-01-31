@@ -1411,8 +1411,7 @@ form .btn {
     overflow-y: hidden;
 
     white-space: nowrap;
-    width: max-content;
-    min-width: 100%;
+    width: max-content;  
 
     padding: 0 20px;
     margin: 0;
@@ -1514,6 +1513,39 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+@media (max-width: 768px) {
+
+  #primary-navigation {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .nav__list {
+    display: inline-flex;      /* NOT flex */
+    flex-wrap: nowrap;
+    gap: 1.6rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+    width: max-content;        /* THIS creates overflow */
+
+    padding: 0 24px;
+    margin: 0;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav__link {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
 
 
 
