@@ -1399,7 +1399,33 @@ form .btn {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 600px) {
 
+  #primary-navigation {
+    justify-content: flex-start !important;
+    overflow: hidden;
+  }
+
+  .nav__list {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav__link {
+    flex: 0 0 auto;
+  }
+}
 
 /* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
 @media (max-width: 425px) {
