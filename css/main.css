@@ -1436,6 +1436,7 @@ form .btn {
   
     .nav__list {
     gap: 1.2rem;
+    overflow: scroll;
   }
 
   .footer-bottom-grid {
@@ -1450,7 +1451,6 @@ form .btn {
   .sacred-title { font-size: 1.8rem; }
   .sacred-banyan { max-width: 200px; }
   
-  .nav__list { gap: 1.2rem; }
   .nav__link { font-size: 0.9rem; }
 }
 
