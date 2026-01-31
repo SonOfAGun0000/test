@@ -1436,7 +1436,7 @@ form .btn {
 }
 
 /* --- 3. MOBILE LARGE (425px) & MEDIUM (375px) --- */
-@media (max-width: 475px) {
+@media (max-width: 425px) {
   .brand__name { font-size: 1.3rem; }
   .sacred-title { font-size: 1.8rem; }
   
