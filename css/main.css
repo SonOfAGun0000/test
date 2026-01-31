@@ -1309,6 +1309,16 @@ form .btn {
     display: block;
     flex: 0 1 auto;
   }
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .footer__about, .footer__links, .footer__contact, .footer-social-block {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ---(768px and down) --- */
@@ -1392,6 +1402,9 @@ form .btn {
 
   .healing-grid, .process-grid, .cert-grid, .support-grid {
     grid-template-columns: 1fr;
+  }
+  .footer__content {
+    gap: 1rem;
   }
 }
 @media (max-width: 600px) {
