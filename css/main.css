@@ -1408,7 +1408,7 @@ form .btn {
   .nav__list {
     display: flex;
     align-items: center;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     flex-wrap: nowrap !important;
     gap: 1.5rem;
     overflow-x: scroll;
