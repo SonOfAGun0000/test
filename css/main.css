@@ -1319,6 +1319,9 @@ form .btn {
     width: 100%;
     text-align: center;
   }
+  .footer__contact p, .footer__about p {
+    justify-content: center;
+  }
 }
 
 /* ---(768px and down) --- */
