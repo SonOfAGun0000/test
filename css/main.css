@@ -1353,7 +1353,7 @@ form .btn {
     /* Gradient Swipe Indicators */
     -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  }
+    }
 
   .nav__list {
     display: flex;
