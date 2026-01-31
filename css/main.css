@@ -1321,6 +1321,7 @@ form .btn {
     text-align: center;
   }
   .footer__contact p, .footer__about p {
+    display: flex;
     width: 100%;
     justify-content: center;
   }
