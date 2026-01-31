@@ -1333,7 +1333,7 @@ form .btn {
   .header__inner {
     display: flex;
     flex-direction: column;
-    align-items: center !important;
+    align-items: center;
     text-align: center;
     padding: 1rem 0 0.5rem 0;
   }
@@ -1343,7 +1343,9 @@ form .btn {
     width: 100%;
     margin-bottom: 0.5rem;
   }
-
+  .brand {
+    text-align: center;
+  }
   .brand__name {
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
