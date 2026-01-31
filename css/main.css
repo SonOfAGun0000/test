@@ -1399,28 +1399,25 @@ form .btn {
 
   #primary-navigation {
     width: 100%;
-    max-width: 100%;
-    /* justify-content: flex-start !important; */
     overflow: hidden;
-    position: relative;
   }
 
   .nav__list {
     display: flex;
-    align-items: center;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;
-    gap: 1.5rem;
-    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 1.6rem;
+
+    overflow-x: auto;
     overflow-y: hidden;
+
+    white-space: nowrap;
     width: max-content;
     min-width: 100%;
-    white-space: nowrap;
-    padding-left: 20px;
-    padding-right: 20px;
-    scroll-behavior: smooth;
+
+    padding: 0 20px;
+    margin: 0;
+
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
   }
 
   .nav__list::-webkit-scrollbar {
@@ -1428,10 +1425,8 @@ form .btn {
   }
 
   .nav__link {
-    flex: 0 0 auto;
-    white-space: nowrap;
     flex-shrink: 0;
-    scroll-snap-align: start;
+    white-space: nowrap;
   }
 }
 
@@ -1441,10 +1436,7 @@ form .btn {
   .sacred-title { font-size: 1.8rem; }
   
     .nav__list {
-    display: flex;
-    align-items: left;
-    justify-content: flex-start !important;
-
+    gap: 1.2rem;
   }
 
   .footer-bottom-grid {
@@ -1479,13 +1471,6 @@ img { max-width: 100%; height: auto; }
     font-size: 0.85rem;
   }
 
-  #primary-navigation {
-    justify-self: center;
-  }
-
-  .nav__list {
-    justify-content: center;
-  }
 .header__nav ul {
   row-gap: 0.3rem;
 }
