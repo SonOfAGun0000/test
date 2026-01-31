@@ -1288,13 +1288,11 @@ form .btn {
     flex: 1;
     display: flex;
     justify-content: center;
-    mask-image: none !important;
   }
 
 .nav__list {
     display: flex;
     flex-wrap: nowrap;
-    overflow: visible !important;
     gap: 1.5rem;
   }
 
