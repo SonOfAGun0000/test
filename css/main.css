@@ -1400,7 +1400,7 @@ form .btn {
   #primary-navigation {
     width: 100%;
     max-width: 100%;
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
     overflow: hidden;
     position: relative;
   }
