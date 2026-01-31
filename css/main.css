@@ -1289,7 +1289,6 @@ form .btn {
     display: flex;
     justify-content: center;
     mask-image: none !important;
-    -webkit-mask-image: none !important;
   }
 
 .nav__list {
@@ -1350,10 +1349,7 @@ form .btn {
     margin-top: 0.8rem;
     border-top: 1px solid #eee;
     padding: 12px 0;
-    /* Gradient Swipe Indicators */
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    }
+   }
 
   .nav__list {
     display: flex;
@@ -1402,20 +1398,28 @@ form .btn {
 @media (max-width: 600px) {
 
   #primary-navigation {
+    width: 100%;
+    max-width: 100%;
     justify-content: flex-start !important;
     overflow: hidden;
+    position: relative;
   }
 
   .nav__list {
+    display: flex;
     justify-content: flex-start !important;
     flex-wrap: nowrap !important;
-    overflow-x: auto;
+    gap: 1.6rem;
+    overflow-x: scroll;
     overflow-y: hidden;
+    width: max-content;
+    min-width: 100%;
     white-space: nowrap;
     padding-left: 20px;
     padding-right: 20px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
   }
 
   .nav__list::-webkit-scrollbar {
@@ -1424,6 +1428,9 @@ form .btn {
 
   .nav__link {
     flex: 0 0 auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
 
@@ -1431,11 +1438,6 @@ form .btn {
 @media (max-width: 425px) {
   .brand__name { font-size: 1.3rem; }
   .sacred-title { font-size: 1.8rem; }
-  
-  /* Gradient tighter for smaller screens */
-  #primary-navigation {
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  }
   
   .footer-bottom-grid {
     grid-template-columns: 1fr;
