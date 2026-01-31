@@ -1322,7 +1322,8 @@ form .btn {
   }
   .footer__contact p, .footer__about p {
     display: flex;
-    width: 100% !important;
+    min-width: 100%;
+    width: 100%;
     justify-content: center;
   }
 }
