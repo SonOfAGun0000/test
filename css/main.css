@@ -1322,7 +1322,7 @@ form .btn {
   }
   .footer__contact p, .footer__about p {
     display: flex;
-    width: 100%;
+    width: 100% !important;
     justify-content: center;
   }
 }
